@@ -17,6 +17,22 @@ const Cart_Reducer = (state, action) => {
     };
   }
 
+  if (action.type === "CART_ITEM_DELETE") {
+    let updatedCart = state.cart.filter(
+      (curElem) => curElem.id !== action.payload
+    );
+    return {
+      ...state,
+      cart: updatedCart,
+    };
+  }
+
+  if (action.type === "CLEAR_CART")
+    return {
+      ...state,
+      cart: [],
+    };
+
   return state;
 };
 

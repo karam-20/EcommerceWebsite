@@ -1,9 +1,12 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
+import { useCartContext } from "../context/CartContext";
 import FormatPrice from "../Helper/FormatPrice";
 import CartAmountToggle from "./CartAmountToggle";
 
 const CartItem = ({ id, name, image, color, price, amount }) => {
+  const { cartItemDelete } = useCartContext();
+
   const setDecrease = () => {};
   const setIncrease = () => {};
   return (
@@ -43,7 +46,12 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
         </p>
       </div>
       <div>
-        <FaTrash className="remove_icon" />
+        <FaTrash
+          className="remove_icon"
+          onClick={() => {
+            cartItemDelete(id);
+          }}
+        />
       </div>
     </div>
   );

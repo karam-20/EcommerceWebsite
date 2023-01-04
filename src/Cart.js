@@ -1,9 +1,15 @@
 import styled from "styled-components";
 import { useCartContext } from "./context/CartContext";
 import CartItem from "./components/CartItem";
+import { NavLink } from "react-router-dom";
+import { Button } from "./styles/Button";
 
 const Cart = () => {
-  const { cart } = useCartContext();
+  const { cart, clearCart } = useCartContext();
+  if (cart.length === 0) {
+    return <div>No item in the cart !</div>;
+  }
+
   return (
     <Wrapper>
       <div className="container">
@@ -19,6 +25,15 @@ const Cart = () => {
           {cart.map((curElem) => {
             return <CartItem key={curElem.id} {...curElem} />;
           })}
+        </div>
+        <hr />
+        <div className="cart-two-button">
+          <NavLink to="/products">
+            <Button>continue shopping</Button>
+          </NavLink>
+          <Button onClick={clearCart} className="btn-clear">
+            clear cart
+          </Button>
         </div>
       </div>
     </Wrapper>
