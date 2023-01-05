@@ -5,10 +5,10 @@ import FormatPrice from "../Helper/FormatPrice";
 import CartAmountToggle from "./CartAmountToggle";
 
 const CartItem = ({ id, name, image, color, price, amount }) => {
-  const { cartItemDelete } = useCartContext();
+  const { cartItemDelete, setIncrement, setDecrement } = useCartContext();
 
-  const setDecrease = () => {};
-  const setIncrease = () => {};
+  // const setDecrease = () => {};
+  // const setIncrease = () => {};
   return (
     <div className="cart-heading grid grid-five-column">
       <div className="cart-image--name">
@@ -37,8 +37,8 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
       {/* //quantity */}
       <CartAmountToggle
         amount={amount}
-        setIncrease={setIncrease}
-        setDecrease={setDecrease}
+        setIncrease={() => setIncrement(id)}
+        setDecrease={() => setDecrement(id)}
       />
       <div className="cart-hide">
         <p>

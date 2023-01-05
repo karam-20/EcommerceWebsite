@@ -6,17 +6,24 @@ import reportWebVitals from "./reportWebVitals";
 import { AppProvider } from "./context/ProductContext";
 import { FilterContextProvider } from "./context/FilterContext";
 import { CartProvider } from "./context/CartContext";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <AppProvider>
-    <FilterContextProvider>
-      <CartProvider>
-        <App />
-      </CartProvider>
-    </FilterContextProvider>
-  </AppProvider>
+  <Auth0Provider
+    domain="dev-whonpq6g6cs5mfr2.us.auth0.com"
+    clientId="y6ygVGoVBTFCs2H6nuzeLMgTlGjFgns4"
+    redirectUri={window.location.origin}
+  >
+    <AppProvider>
+      <FilterContextProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </FilterContextProvider>
+    </AppProvider>
+  </Auth0Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
