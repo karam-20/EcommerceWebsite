@@ -16,8 +16,10 @@ const GridView = ({ products }) => {
 
 const Wrapper = styled.section`
   padding: 9rem 0;
+
   .container {
     max-width: 120rem;
+    background-color: #fff;
   }
   .grid {
     gap: 3.2rem;
@@ -54,24 +56,44 @@ const Wrapper = styled.section`
       transition: all 0.2s linear;
     }
   }
+  .product-add-to-cart {
+    background-color: #6861ef;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 12px;
+  }
   .card {
-    background-color: ${({ theme }) => theme.colors.bg};
-    border-radius: 1rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 15px -6px #777;
+
     .card-data {
       padding: 0 1rem;
     }
     .card-data-flex {
-      margin: 2rem 0;
+      margin: 1rem 0;
+      padding: 0 0.7rem;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
+
       align-items: center;
     }
     .card-data--price {
       color: ${({ theme }) => theme.colors.helper};
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 14px;
     }
     h3 {
       color: ${({ theme }) => theme.colors.text};
-      text-transform: capitalize;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 8px;
     }
     .btn {
       margin: 2rem auto;

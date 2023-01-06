@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
 
 
 }
@@ -25,27 +25,13 @@ body {
     scrollbar-width: thin;
 }
 
-body::-webkit-scrollbar {
-  width: 1.5rem;
-}
 
-body::-webkit-scrollbar-track {
-   background-color: rgb(24 24 29);
-}
-
-body::-webkit-scrollbar-thumb {
- 
-  background: #fff;
-    border: 5px solid transparent;
-    border-radius: 9px;
-    background-clip: content-box;
-}
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
 
 
 
@@ -60,7 +46,7 @@ h1 {
  h2 {
    color: ${({ theme }) => theme.colors.heading};
    font-size: 4.4rem;
-   font-weight: 300;
+   font-weight: 600;
    white-space: normal;
   
   }
@@ -83,6 +69,7 @@ a {
 
 li {
   list-style: none;
+
 }
 
 

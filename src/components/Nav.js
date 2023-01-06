@@ -95,7 +95,7 @@ const Navbar = styled.nav`
       }
       &:hover,
       &:active {
-        color: ${({ theme }) => theme.colors.helper};
+        color: #5138ee;
       }
     }
   }

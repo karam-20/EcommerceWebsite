@@ -16,8 +16,8 @@ const Header = () => {
 
 const MainHeader = styled.header`
   padding: 0 6rem;
-  height: 7rem;
-  background-color: ${({ theme }) => theme.colors.bg};
+  height: 8.5rem;
+  background-color: #fefeff;
   display: flex;
   justify-content: space-between;
   align-items: center;

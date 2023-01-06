@@ -10,8 +10,11 @@ const HeroSection = ({ myData }) => {
       <div className="container">
         <div className="grid grid-two-column">
           <div className="hero-section-data">
-            <p className="intro-data">Welcome to</p>
-            <h1>{name}</h1>
+            <p className="intro-data">Welcome to,</p>
+            <h1>
+              <span className="hero-heading-start">the </span>
+              {name}
+            </h1>
             <p>
               Hamare yha pe sabhi branch ke shivani ke vaani Notes available h
               wo bhi ekdum kifaayati daam me, kharidne keliye niche diye gye
@@ -42,6 +45,9 @@ const Wrapper = styled.section`
   .grid {
     margin: 0 30px;
   }
+  .hero-heading-start {
+    color: #6861ef;
+  }
 
   img {
     min-width: 10rem;
@@ -51,14 +57,19 @@ const Wrapper = styled.section`
     p {
       margin: 2rem 0;
       padding-right: 10px;
+      font-weight: 400;
+      font-size: 15px;
+      text-transform: capitalize;
     }
     h1 {
       text-transform: capitalize;
-      font-weight: 500;
-      font-size: 45px;
+      font-weight: 600;
+      font-size: 60px;
     }
     .intro-data {
       margin-bottom: 0;
+      font-weight: 500;
+      font-size: 22px;
     }
   }
   .hero-section-image {

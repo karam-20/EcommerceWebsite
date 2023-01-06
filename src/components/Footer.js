@@ -9,18 +9,6 @@ import { FaInstagramSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <Wrapper>
-      <section className="contact-short">
-        <div className="grid grid-two-column short-content">
-          <div>
-            <h3 className="short-footer-heading">Ready to get started ?</h3>
-            <h3 className="short-footer-heading">Talk to us today</h3>
-          </div>
-          <Button>
-            <NavLink to="/contact">Get started</NavLink>
-          </Button>
-        </div>
-      </section>
-
       <footer>
         <div className="container grid grid-four-column">
           <div className="column-1">
@@ -54,9 +42,6 @@ const Footer = () => {
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
 
         <hr className="footer-line" />
 
@@ -85,12 +70,15 @@ const Wrapper = styled.section`
   }
   .footer-bottom-text {
     font-size: 14px;
+    color: #18181d;
   }
   .footer-bottom {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 20px 20rem;
+    padding: 8px 0;
+
+    background-color: #fefeff;
   }
   .contact-short {
     max-width: 90vh;
@@ -107,8 +95,8 @@ const Wrapper = styled.section`
     border-top: 1px solid white;
   }
   footer {
-    padding: 10rem 0 3rem 0;
-    background-color: ${({ theme }) => theme.colors.footer_bg};
+    padding: 5rem 0 0rem 0;
+    background-color: #2c394b;
   }
   .footer-input {
     margin: 5px 0 20px 0;

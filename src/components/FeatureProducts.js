@@ -25,8 +25,17 @@ const FeatureProducts = () => {
 };
 const Wrapper = styled.section`
   padding: 8rem 0rem;
-  margin: 2rem 0 22rem 0;
-  background-color: ${({ theme }) => theme.colors.bg};
+  margin: 2rem 0 12rem 0;
+  background-color: #f6f8fa;
+
+  .product-add-to-cart {
+    background-color: #6861ef;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 12px;
+  }
   .container {
     max-width: 110rem;
   }
@@ -85,7 +94,7 @@ const Wrapper = styled.section`
   }
   .card {
     background-color: #fff;
-    border-radius: 1rem;
+
     .card-data {
       padding: 0 2rem;
       padding-bottom: 1px;
@@ -93,15 +102,20 @@ const Wrapper = styled.section`
     .card-data-flex {
       margin: 2rem 0;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       align-items: center;
     }
     h3 {
       color: ${({ theme }) => theme.colors.text};
-      text-transform: capitalize;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 15px;
     }
     .card-data--price {
-      color: ${({ theme }) => theme.colors.helper};
+      color: #6861ef;
+      font-weight: 500;
+      font-size: 14px;
     }
     .btn {
       margin: 2rem auto;

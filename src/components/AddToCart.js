@@ -6,8 +6,13 @@ import CartAmountToggle from "./CartAmountToggle";
 import { NavLink } from "react-router-dom";
 import { Button } from "../styles/Button";
 import { useCartContext } from "../context/CartContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddToCart = ({ product }) => {
+  const notify = () => {
+    toast.success("Item added to the cart.");
+  };
   const [amount, setAmount] = useState(1);
   const setDecrease = () => {
     amount > 1 ? setAmount(amount - 1) : setAmount(1);
@@ -44,18 +49,27 @@ const AddToCart = ({ product }) => {
         setDecrease={setDecrease}
       />
       <NavLink
-        to="/cart"
         onClick={() => {
           addToCartData(id, color, amount, product);
         }}
       >
-        <Button className="btn">Add To Cart</Button>
+        <Button onClick={notify} className="btn">
+          Add To Cart
+        </Button>
       </NavLink>
+      <ToastContainer
+        position="top-center"
+        autoClose={1500}
+        className="toast-container"
+      />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
+  .toast-container {
+    font-size: 14px;
+  }
   .colors p {
     display: flex;
     justify-content: flex-start;

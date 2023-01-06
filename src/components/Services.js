@@ -44,7 +44,7 @@ const Services = () => {
 const Wrapper = styled.section`
   .grid {
     gap: 4.8rem;
-    margin: 0 28px;
+    margin: 0 5px;
   }
   .services-1,
   .services-2,
